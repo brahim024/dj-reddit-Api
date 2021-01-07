@@ -20,13 +20,14 @@
 </nav>
 <div class="card card-outline-secondary my-4">
 {% for i in data %}
+  {% if data %}
   <div class="card" style="width: auto;">
   <div class="card-body">
     <h6 class="card-title">{{i.title}}</h6>
-    
+  
     <div>
     
-    <small class="text-muted">With faded secondary text Some quick example text to build on the card title and make up the bulk of the card's content</small>
+    <small class="text-muted">{{i.description}}</small>
   </div>
     <small>
       <a href="#" class="card-link">Card link</a>
@@ -34,6 +35,7 @@
     </small>
   </div>
 </div> 
+{% endif %}
 {% endfor %}
 </div>
 
