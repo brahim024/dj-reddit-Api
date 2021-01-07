@@ -17,5 +17,6 @@ def get_news(request):
 	'publishedAt':r['articles'][5]['publishedAt'],
 	
 	}
+	context={'context_data':context_data}
 	print(context_data)
-	return render(request,'home.html',{'data':context_data})
+	return render(request,'home.html',context)
