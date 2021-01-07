@@ -11,12 +11,14 @@ def get_news(request):
 	context_data={
 	'author':r['articles'][0]['author'],
 	'title':r['articles'][1]['title'],
-	'description':r['articles'][2]['description'],
 	'url':r['articles'][3]['url'],
 	'urlToImage':r['articles'][4]['urlToImage'],
 	'publishedAt':r['articles'][5]['publishedAt'],
 	
 	}
-	context={'context_data':context_data}
-	print(context_data)
-	return render(request,'home.html',context)
+	i=context_data.articles
+	for item in i:
+		print(item)
+	
+
+	return render(request,'home.html')
